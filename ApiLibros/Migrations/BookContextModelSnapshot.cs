@@ -18,22 +18,37 @@ namespace ApiLibros.Migrations
 
             modelBuilder.Entity("MiApiSQLite.Models.Book", b =>
                 {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("INTEGER");
+                    b.Property<string>("isbn")
+                        .HasColumnType("TEXT");
 
-                    b.Property<string>("Author")
+                    b.Property<string>("author")
                         .IsRequired()
                         .HasColumnType("TEXT");
 
-                    b.Property<string>("Title")
+                    b.Property<string>("image_url_l")
                         .IsRequired()
                         .HasColumnType("TEXT");
 
-                    b.Property<int>("Year")
+                    b.Property<string>("image_url_m")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("image_url_s")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("publisher")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("title")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<int>("year_of_publication")
                         .HasColumnType("INTEGER");
 
-                    b.HasKey("Id");
+                    b.HasKey("isbn");
 
                     b.ToTable("Books");
                 });

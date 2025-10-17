@@ -157,3 +157,4 @@
 /Users/marc/Documents/Clase/Proyecto/1rt/Api/ApiLibros/obj/Debug/net8.0/ApiLibros.pdb
 /Users/marc/Documents/Clase/Proyecto/1rt/Api/ApiLibros/obj/Debug/net8.0/ApiLibros.genruntimeconfig.cache
 /Users/marc/Documents/Clase/Proyecto/1rt/Api/ApiLibros/obj/Debug/net8.0/ref/ApiLibros.dll
+/Users/marc/Documents/Clase/Proyecto/1rt/Api/ApiLibros/obj/Debug/net8.0/ApiLibros.sourcelink.json

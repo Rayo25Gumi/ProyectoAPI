@@ -1,7 +1,7 @@
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 using MiApiSQLite.Data;
 using MiApiSQLite.Models;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace MiApiSQLite.Controllers
 {
@@ -22,12 +22,86 @@ namespace MiApiSQLite.Controllers
             return await _context.Books.ToListAsync();
         }
 
-        [HttpPost]
-        public async Task<ActionResult<Book>> PostBook(Book book)
+        [HttpGet("isbn/{ISBN}")]
+        public async Task<ActionResult<Book>> GetBooks(string ISBN)
         {
-            _context.Books.Add(book);
-            await _context.SaveChangesAsync();
-            return CreatedAtAction(nameof(GetBooks), new { id = book.Id }, book);
+            var books = await _context.Books.FindAsync(ISBN);
+
+            if (books == null)
+            {
+                return NotFound();
+            }
+
+            return books;
         }
+
+        [HttpGet("title/{BookTitle}")]
+        public async Task<ActionResult<IEnumerable<Book>>> GetBookByTitle(string BookTitle)
+        {
+            var books = await (
+                from b in _context.Books
+                where b.BookTitle != null && b.BookTitle.Contains(BookTitle)
+                select b
+            ).ToListAsync();
+
+            if (books == null)
+            {
+                return NotFound();
+            }
+
+            return books;
+        }
+
+        [HttpGet("Author/{BookAuthor}")]
+        public async Task<ActionResult<IEnumerable<Book>>> GetBookByAuthor(string BookAuthor)
+        {
+            var books = await (
+                from b in _context.Books
+                where b.BookAuthor != null && b.BookAuthor.Contains(BookAuthor)
+                select b
+            ).ToListAsync();
+
+            if (books == null)
+            {
+                return NotFound();
+            }
+
+            return books;
+        }
+
+        [HttpGet("year/{YearOfPublication}")]
+        public async Task<ActionResult<IEnumerable<Book>>> GetBookByYear(int YearOfPublication)
+        {
+            var books = await (
+                from b in _context.Books
+                where b.YearOfPublication == YearOfPublication
+                select b
+            ).ToListAsync();
+
+            if (books == null)
+            {
+                return NotFound();
+            }
+
+            return books;
+        }
+
+        [HttpGet("publisher/{Publisher}")]
+        public async Task<ActionResult<IEnumerable<Book>>> GetBookByPublisher(string Publisher)
+        {
+            var books = await (
+                from b in _context.Books
+                where b.Publisher != null && b.Publisher.Contains(Publisher)
+                select b
+            ).ToListAsync();
+
+            if (books == null)
+            {
+                return NotFound();
+            }
+
+            return books;
+        }
+        
     }
 }
