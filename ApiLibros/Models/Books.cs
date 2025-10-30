@@ -2,7 +2,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace MiApiSQLite.Models
 {
-    // Models/libros.cs
+    // Models/Books.cs
     public class Book
     {
         [Key]

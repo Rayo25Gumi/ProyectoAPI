@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/marc/Documents/Clase/Proyecto/1rt/Api/ApiLibros/ApiLibros.csproj": {}
+    "/Users/marc/Documents/Clase/Proyecto/1rt/ProyectoAPI/ApiLibros/ApiLibros.csproj": {}
   },
   "projects": {
-    "/Users/marc/Documents/Clase/Proyecto/1rt/Api/ApiLibros/ApiLibros.csproj": {
+    "/Users/marc/Documents/Clase/Proyecto/1rt/ProyectoAPI/ApiLibros/ApiLibros.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/marc/Documents/Clase/Proyecto/1rt/Api/ApiLibros/ApiLibros.csproj",
+        "projectUniqueName": "/Users/marc/Documents/Clase/Proyecto/1rt/ProyectoAPI/ApiLibros/ApiLibros.csproj",
         "projectName": "ApiLibros",
-        "projectPath": "/Users/marc/Documents/Clase/Proyecto/1rt/Api/ApiLibros/ApiLibros.csproj",
+        "projectPath": "/Users/marc/Documents/Clase/Proyecto/1rt/ProyectoAPI/ApiLibros/ApiLibros.csproj",
         "packagesPath": "/Users/marc/.nuget/packages/",
-        "outputPath": "/Users/marc/Documents/Clase/Proyecto/1rt/Api/ApiLibros/obj/",
+        "outputPath": "/Users/marc/Documents/Clase/Proyecto/1rt/ProyectoAPI/ApiLibros/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/marc/.nuget/NuGet/NuGet.Config"

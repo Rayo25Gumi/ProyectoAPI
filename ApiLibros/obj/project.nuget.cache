@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "yqlbjw6+ae4=",
+  "dgSpecHash": "kaAT6eyeO+c=",
   "success": true,
-  "projectFilePath": "/Users/marc/Documents/Clase/Proyecto/1rt/Api/ApiLibros/ApiLibros.csproj",
+  "projectFilePath": "/Users/marc/Documents/Clase/Proyecto/1rt/ProyectoAPI/ApiLibros/ApiLibros.csproj",
   "expectedPackageFiles": [
     "/Users/marc/.nuget/packages/humanizer.core/2.14.1/humanizer.core.2.14.1.nupkg.sha512",
     "/Users/marc/.nuget/packages/microsoft.aspnetcore.openapi/8.0.8/microsoft.aspnetcore.openapi.8.0.8.nupkg.sha512",

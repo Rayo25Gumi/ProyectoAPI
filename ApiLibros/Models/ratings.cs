@@ -1,12 +1,15 @@
+using System.ComponentModel.DataAnnotations;
+
 namespace MiApiSQLite.Models
 
 {
-    // Models/libros.cs
+    // Models/Ratings.cs
     public class Ratings
     {
-        public string isbn { get; set; }
-        public int user_id { get; set; }
-        public string book_rating { get; set; }
+        [Key]
+        public string? ISBN { get; set; }
+        public int? UserID { get; set; }
+        public int? BookRating { get; set; }
        
     }
 

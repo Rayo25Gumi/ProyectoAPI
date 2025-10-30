@@ -8,6 +8,10 @@ builder.Services.AddControllers();
 builder.Services.AddDbContext<BookContext>(options =>
     options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection")));
 
+builder.Services.AddDbContext<RatingContext>(options =>
+    options.UseSqlite(builder.Configuration.GetConnectionString("RatingConnection")));
+
+
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
